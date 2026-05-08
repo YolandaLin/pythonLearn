@@ -2,26 +2,58 @@
 
 ## 交作業前檢查
 
-- [ ] 知道 list 與 dict 適用場景
-- [ ] 能使用 in 判斷 key 是否存在
-- [ ] 能走訪 dict.items()
+- [ ] `student_card.py` 有完整輸出學生摘要。
+- [ ] `contacts.py` 查得到與查不到都有測試。
+- [ ] `student_scores.py` 能找出最高分學生。
+- [ ] README 有貼上測試資料與結果。
 
 ## 常見錯誤
 
-- 只讓程式在一組範例輸入下成功，沒有測邊界情況。
-- 變數名稱太籠統，例如 `a`、`b`、`x`，導致一週後看不懂。
-- 沒有在 README 寫如何執行程式。
-- 把錯誤訊息只看最後一行，沒有回頭看檔名與行號。
+### 1. key 寫錯就查不到
+
+```python
+student = {"name": "小明"}
+print(student["Name"])
+```
+
+`name` 和 `Name` 不一樣。key 大小寫與文字都要完全相同。
+
+### 2. 查不存在的 key 會出錯
+
+```python
+print(contacts["小王"])
+```
+
+如果沒有 `小王`，會出現 `KeyError`。可以先判斷：
+
+```python
+if name in contacts:
+    print(contacts[name])
+else:
+    print("查無此人")
+```
+
+### 3. list 和 dict 混在一起時看不懂
+
+看到：
+
+```python
+students[0]["name"]
+```
+
+先拆開想：`students[0]` 是第一位學生的 dict，`["name"]` 是拿這位學生的姓名。
+
+### 4. dict 不是照座號排序的表格
+
+dict 的重點是用 key 查資料，不是用第幾個位置查資料。需要順序時通常用 list。
 
 ## 修正方向
 
-1. 至少準備三組測試資料：正常、邊界、錯誤輸入。
-2. 把重複出現的邏輯整理成函式。
-3. 用自己的話寫下本週最重要的觀念。
-4. 若程式有使用外部檔案，確認檔名與相對路徑正確。
+1. key 建議固定用英文小寫，例如 `name`、`score`。
+2. 查詢前先用 `in`，避免 KeyError。
+3. list + dict 看不懂時，先把其中一筆資料 print 出來。
+4. 變數名稱要能看出資料型態，例如 `student`、`students`、`contacts`。
 
 ## 延伸練習
 
-本週作品是：學生資料查詢系統
-
-完成基本功能後，試著加入選單、儲存紀錄或更友善的錯誤訊息。
+把 `student_scores.py` 改成同時算出平均分數。

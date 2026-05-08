@@ -2,26 +2,46 @@
 
 ## 交作業前檢查
 
-- [ ] 知道 request 與 response 的基本概念
-- [ ] 能把 JSON 轉成 dict/list 使用
-- [ ] 知道不要把 API key commit 到 GitHub
+- [ ] `json_viewer.py` 能讀取 `data/profile.json`。
+- [ ] `public_api.py` 有印出 status code。
+- [ ] README 有貼上 API 回傳重點，或記錄網路錯誤。
+- [ ] learning-log.md 有說明 request、response、200、404。
 
 ## 常見錯誤
 
-- 只讓程式在一組範例輸入下成功，沒有測邊界情況。
-- 變數名稱太籠統，例如 `a`、`b`、`x`，導致一週後看不懂。
-- 沒有在 README 寫如何執行程式。
-- 把錯誤訊息只看最後一行，沒有回頭看檔名與行號。
+### 1. JSON 格式少逗號或多逗號
+
+JSON 格式比 Python 嚴格。每個欄位之間要有逗號，最後一個欄位後面不要多逗號。
+
+### 2. 忘記 import json 或 requests
+
+讀本地 JSON 需要：
+
+```python
+import json
+```
+
+呼叫網路 API 通常需要：
+
+```python
+import requests
+```
+
+### 3. 網路失敗不等於程式邏輯錯
+
+API 可能因為網路、伺服器、限制次數而失敗。請先印出 status code 和錯誤訊息。
+
+### 4. 直接假設欄位一定存在
+
+API 回傳資料可能沒有你想要的欄位。可以先 print 整份資料，確認欄位名稱。
 
 ## 修正方向
 
-1. 至少準備三組測試資料：正常、邊界、錯誤輸入。
-2. 把重複出現的邏輯整理成函式。
-3. 用自己的話寫下本週最重要的觀念。
-4. 若程式有使用外部檔案，確認檔名與相對路徑正確。
+1. 先完成本地 JSON，再做網路 API。
+2. 每次讀到資料，先觀察型態是 dict 還是 list。
+3. 呼叫 API 後先檢查 status code。
+4. 不要把 token、API key、密碼貼到 README 或 GitHub。
 
 ## 延伸練習
 
-本週作品是：天氣或公開資料查詢工具
-
-完成基本功能後，試著加入選單、儲存紀錄或更友善的錯誤訊息。
+把 GitHub API 回傳的資料整理成一段自我介紹文字。

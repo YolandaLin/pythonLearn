@@ -2,7 +2,25 @@
 
 ## 專題目標
 
-完成一個可以展示的 Python 小作品。題目可以來自生活、學校、社團、科展或個人興趣。
+完成一個可以展示、可以執行、可以讓同學照 README 跑起來的 Python 小作品。題目可以來自生活、學校、社團、科展或個人興趣。
+
+## 選題原則
+
+好的專題不是功能最多，而是問題清楚、範圍合理、可以完成。
+
+請優先選擇：
+
+- 兩週內可以做出 MVP 的題目。
+- 資料來源清楚的題目。
+- 可以用終端機操作的題目。
+- 能展示輸入、處理、輸出的題目。
+
+請避免：
+
+- 需要登入系統。
+- 需要複雜資料庫。
+- 需要金流或個資。
+- 完整大型網站或大型遊戲。
 
 ## 題目範例
 
@@ -13,61 +31,86 @@
 - 天氣資料查詢與穿搭提醒
 - 文字冒險或猜謎遊戲
 - 個人記帳與分類統計
+- GitHub 使用者公開資料查詢工具
 
 ## 必備內容
 
-1. README.md：作品介紹、安裝方式、執行方式、範例輸出。
-2. 至少一個 .py 主程式。
-3. 至少三組測試資料或操作截圖。
-4. `final_report.md`：開發過程、遇到的問題、下一版規劃。
+1. `README.md`：作品介紹、安裝方式、執行方式、範例輸出。
+2. 至少一個 `.py` 主程式。
+3. 需要時附上 `data/` 或 `sample_data/`。
+4. 至少三組測試資料或操作截圖。
+5. `final_report.md`：開發過程、遇到的問題、下一版規劃。
 
 ## 專題提案模板
 
-`markdown
+````markdown
 # 專題名稱
 
 ## 我想解決的問題
 
 ## 使用者是誰
 
-## 必做功能
+## 最小可行版本 MVP
 
-- 
-- 
-- 
+只列 2 到 3 個一定要完成的功能。
 
-## 可能加分功能
+## Must 功能
 
-- 
-- 
+-
+-
+
+## Should 功能
+
+-
+-
+
+## Could 功能
+
+-
+-
 
 ## 會使用的資料
 
+資料是使用者輸入、CSV、JSON、API，還是程式內建？
+
 ## 預計檔案結構
 
+```text
+project/
+├── main.py
+├── data/
+├── README.md
+└── final_report.md
+```
+
 ## 風險與卡關點
-`
-"@
 
-Write-Doc 'LICENSE' @"
-MIT License
+列出你最可能卡住的 2 件事。
+````
 
-Copyright (c) 2026 YolandaLin
+## final_report.md 模板
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this repository and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+```markdown
+# 專題成果報告
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## 作品名稱
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+## 作品介紹
+
+## 完成功能
+
+-
+-
+
+## 使用方式
+
+## 測試資料
+
+## 遇到的困難
+
+## 我的解法或取捨
+
+## 最想展示的一段程式碼
+
+## 下一版想改進什麼
+```
